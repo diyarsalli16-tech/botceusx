@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: site-panel-only-discord-server-manager
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TOKEN
+        sync: false
+      - key: GUILD_ID
+        sync: false
+      - key: DASHBOARD_PASSWORD
+        sync: false
+      - key: LINK_BLOCKER
+        value: "false"
